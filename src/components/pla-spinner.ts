@@ -32,7 +32,7 @@ export class PlaSpinner extends LitElement {
     }
 
     .lds-roller div:nth-child(1) {
-      animation-delay: -0.036s;
+      animation-delay: calc(-0.03 * var(--speed, 1.2s));
     }
 
     .lds-roller div:nth-child(1):after {
@@ -41,7 +41,7 @@ export class PlaSpinner extends LitElement {
     }
 
     .lds-roller div:nth-child(2) {
-      animation-delay: -0.072s;
+      animation-delay: calc(-0.06 * var(--speed, 1.2s));
     }
 
     .lds-roller div:nth-child(2):after {
@@ -50,7 +50,7 @@ export class PlaSpinner extends LitElement {
     }
 
     .lds-roller div:nth-child(3) {
-      animation-delay: -0.108s;
+      animation-delay: calc(-0.09 * var(--speed, 1.2s));
     }
 
     .lds-roller div:nth-child(3):after {
@@ -59,7 +59,7 @@ export class PlaSpinner extends LitElement {
     }
 
     .lds-roller div:nth-child(4) {
-      animation-delay: -0.144s;
+      animation-delay: calc(-0.12 * var(--speed, 1.2s));
     }
 
     .lds-roller div:nth-child(4):after {
@@ -68,7 +68,7 @@ export class PlaSpinner extends LitElement {
     }
 
     .lds-roller div:nth-child(5) {
-      animation-delay: -0.18s;
+      animation-delay: calc(-0.15 * var(--speed, 1.2s));
     }
 
     .lds-roller div:nth-child(5):after {
@@ -77,7 +77,7 @@ export class PlaSpinner extends LitElement {
     }
 
     .lds-roller div:nth-child(6) {
-      animation-delay: -0.216s;
+      animation-delay: calc(-0.18 * var(--speed, 1.2s));
     }
 
     .lds-roller div:nth-child(6):after {
@@ -86,7 +86,7 @@ export class PlaSpinner extends LitElement {
     }
 
     .lds-roller div:nth-child(7) {
-      animation-delay: -0.252s;
+      animation-delay: calc(-0.21 * var(--speed, 1.2s));
     }
 
     .lds-roller div:nth-child(7):after {
@@ -95,7 +95,7 @@ export class PlaSpinner extends LitElement {
     }
 
     .lds-roller div:nth-child(8) {
-      animation-delay: -0.288s;
+      animation-delay: calc(-0.24 * var(--speed, 1.2s));
     }
 
     .lds-roller div:nth-child(8):after {
@@ -114,7 +114,7 @@ export class PlaSpinner extends LitElement {
   `;
 
   render() {
-    return html` <div class="lds-roller">
+    return html`<div class="lds-roller">
       <div></div>
       <div></div>
       <div></div>

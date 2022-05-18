@@ -10,9 +10,9 @@ function showMessage(): void {
 }
 
 function showSpinner(): void {
-  document
-    .querySelector(".section-spinners")
-    ?.append(document.createElement("pla-spinner"));
+  const spinner = document.createElement("pla-spinner");
+  document.querySelector(".section-spinners")?.append(spinner);
+  setTimeout(() => spinner.remove(), 8000);
 }
 
 document

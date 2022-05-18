@@ -33,4 +33,5 @@ h2 {
 
 pla-spinner {
   --color: hsl(32, 95%, 44%);
+  --speed: 1.2s;
 }
