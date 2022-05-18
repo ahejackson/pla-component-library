@@ -11,9 +11,18 @@
 <body>
   <section class="section-messages">
     <h2>Messages</h2>
-    <pla-message type="info" message="First message">
+    <pla-message type="info" message="Info message">
     </pla-message>
-    <pla-message type="info">Second message</pla-message>
+    <pla-message type="success" message="Info message">
+    </pla-message>
+    <pla-message type="warn" message="Warning message">
+    </pla-message>
+    <pla-message type="error" message="Error message">
+    </pla-message>
+    <pla-message type="info">
+      <p>This is a multiline message</p>
+      <p>Because it has two lines</p>
+    </pla-message>
     <button id="show-message">Show Message</button>
   </section>
 

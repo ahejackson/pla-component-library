@@ -5,6 +5,7 @@ import "./components/pla-spinner";
 function showMessage(): void {
   const message = document.createElement("pla-message");
   message.message = "Javascript created message";
+  message.type = "warn";
   document.querySelector(".section-messages")?.append(message);
 }
 

@@ -10,12 +10,9 @@
   --gray-8: #343a40;
   --gray-9: #212529;
 
-  --blue-1: #04b2d9;
-  --blue-2: #0378a6;
-  --green: #8abf8d;
-
-  --red: #d8000c;
-  --red-bg: rgba(255, 186, 186, 0.8);
+  --blue-1: hsl(191, 96%, 43%);
+  --blue-2: hsl(197, 96%, 33%);
+  --green: hsl(123, 29%, 65%);
 }
 
 body {
@@ -34,10 +31,6 @@ h2 {
   margin: 0;
 }
 
-pla-message {
-  --color: blue;
-}
-
 pla-spinner {
-  --color: red;
+  --color: hsl(32, 95%, 44%);
 }
