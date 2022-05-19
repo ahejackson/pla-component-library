@@ -12,6 +12,6 @@ export default class PlaIVs extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "pla-shiny": PlaIVs;
+    "pla-ivs": PlaIVs;
   }
 }

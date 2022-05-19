@@ -1,0 +1,53 @@
+body {
+  font-family: Lato, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 1rem;
+  background-color: var(--surface3);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+main > section {
+  flex: 1 1 45%;
+}
+
+section {
+  background-color: var(--surface2);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+pla-spinner {
+  --color: hsl(32, 95%, 44%);
+  --speed: 1.2s;
+}
+
+details {
+  background-color: var(--surface1);
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.4rem;
+}

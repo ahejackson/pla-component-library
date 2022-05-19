@@ -5,108 +5,135 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>PLA Component Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <section class="section-messages">
-    <h2>Messages</h2>
+  <header id="header">
+    <h1 class="pla-heading"><span class="pla-heading-highlight">PLA</span> Component Library</h1>
 
-    <pla-message type="info" message="Info message" closable>
-    </pla-message>
+  </header>
 
-    <pla-message type="success" message="Info message">
-    </pla-message>
+  <main>
+    <section class="section-messages">
+      <h2>Messages</h2>
 
-    <pla-message type="warn"
-      message="Warning message... and a really long one at that to see what happens when things wrap" closable>
-    </pla-message>
+      <details>
+        <summary>Create a new message</summary>
+        <div class="stack">
+          <input id="new-message-text" type="text" value="Message text" />
+          <select id="new-message-type">
+            <option value="info">Info</option>
+            <option value="success">Success</option>
+            <option value="warn">Warning</option>
+            <option value="error">Error</option>
+          </select>
+          <label><input id="new-message-closable" type="checkbox" checked /> Closable?</label>
+          <button id="show-message" type="button">Show Message</button>
+        </div>
+      </details>
 
-    <pla-message type="error" message="Error message">
-    </pla-message>
+      <div id="messages-area">
+        <pla-message type="info" closable>
+          <p>This is a multiline message (that's also closable)</p>
+          <p>Because it has multiple paragraph tags</p>
+          <p>It can contain other HTML elements too... <pla-is-shiny shiny icononly></pla-is-shiny>
+          </p>
+        </pla-message>
 
-    <pla-message type="info" closable>
-      <p>This is a multiline message</p>
-      <p>Because it has two lines</p>
-    </pla-message>
+        <pla-message type="success" message="Success message">
+        </pla-message>
 
-    <button id="show-message">Show Message</button>
-  </section>
+        <pla-message type="warn"
+          message="Closable warning message... and a really long one at that to see what happens when things wrap"
+          closable>
+        </pla-message>
 
-  <section class="section-spinners">
-    <h2>Spinners</h2>
-    <button id="show-spinner">Show a spinner</button>
-  </section>
+        <pla-message type="error">
+          Error Message
+        </pla-message>
+      </div>
+    </section>
 
-  <section class="section-shiny">
-    <h2>Is Shiny</h2>
+    <section class="section-spinners">
+      <h2>Spinners</h2>
+      <button id="show-spinner">Show a spinner</button>
+      <div id="spinner-area"></div>
+    </section>
 
-    <ul>
-      <li>
-        <pla-is-shiny shiny square></pla-is-shiny>
-      </li>
-      <li>
-        <pla-is-shiny shiny></pla-is-shiny>
-      </li>
-      <li>
-        <pla-is-shiny></pla-is-shiny>
-      </li>
-    </ul>
+    <section class="section-shiny">
+      <h2>Is Shiny</h2>
 
-    <h3>Icon only</h3>
+      <ul>
+        <li>
+          <pla-is-shiny shiny square></pla-is-shiny>
+        </li>
+        <li>
+          <pla-is-shiny shiny></pla-is-shiny>
+        </li>
+        <li>
+          <pla-is-shiny></pla-is-shiny>
+        </li>
+      </ul>
 
-    <ul>
-      <li>
-        <pla-is-shiny icononly shiny square></pla-is-shiny>
-      </li>
-      <li>
-        <pla-is-shiny icononly shiny></pla-is-shiny>
-      </li>
-      <li>
-        <pla-is-shiny icononly></pla-is-shiny>
-      </li>
-    </ul>
-  </section>
+      <h3>Icon only</h3>
 
-  <section class="section-shiny">
-    <h2>Is Alpha</h2>
+      <ul>
+        <li>
+          <pla-is-shiny icononly shiny square></pla-is-shiny>
+        </li>
+        <li>
+          <pla-is-shiny icononly shiny></pla-is-shiny>
+        </li>
+        <li>
+          <pla-is-shiny icononly></pla-is-shiny>
+        </li>
+      </ul>
+    </section>
 
-    <ul>
-      <li>
-        <pla-is-alpha alpha></pla-is-alpha>
-      </li>
-      <li>
-        <pla-is-alpha></pla-is-alpha>
-      </li>
-    </ul>
+    <section class="section-shiny">
+      <h2>Is Alpha</h2>
 
-    <h3>Icon only</h3>
+      <ul>
+        <li>
+          <pla-is-alpha alpha></pla-is-alpha>
+        </li>
+        <li>
+          <pla-is-alpha></pla-is-alpha>
+        </li>
+      </ul>
 
-    <ul>
-      <li>
-        <pla-is-alpha icononly alpha></pla-is-alpha>
-      </li>
-      <li>
-        <pla-is-alpha icononly></pla-is-alpha>
-      </li>
-    </ul>
-  </section>
+      <h3>Icon only</h3>
 
-  <section class="section-gender">
-    <h2>Gender</h2>
+      <ul>
+        <li>
+          <pla-is-alpha icononly alpha></pla-is-alpha>
+        </li>
+        <li>
+          <pla-is-alpha icononly></pla-is-alpha>
+        </li>
+      </ul>
+    </section>
 
-    <ul>
-      <li>
-        <pla-gender gender="male"></pla-gender>
-      </li>
-      <li>
-        <pla-gender gender="female"></pla-gender>
-      </li>
-      <li>
-        <pla-gender gender="genderless"></pla-gender>
-      </li>
-    </ul>
-  </section>
+    <section class="section-gender">
+      <h2>Gender</h2>
+
+      <ul>
+        <li>
+          <pla-gender gender="male"></pla-gender>
+        </li>
+        <li>
+          <pla-gender gender="female"></pla-gender>
+        </li>
+        <li>
+          <pla-gender gender="genderless"></pla-gender>
+        </li>
+      </ul>
+    </section>
+  </main>
 
   <script type="module" src="/src/main.ts"></script>
 </body>

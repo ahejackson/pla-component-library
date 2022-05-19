@@ -126,3 +126,9 @@ export class PlaSpinner extends LitElement {
     </div>`;
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "pla-spinner": PlaSpinner;
+  }
+}

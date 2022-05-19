@@ -1,0 +1,10 @@
+import "./pla-expandable-panel";
+import "./pla-expandable";
+import "./pla-gender";
+import "./pla-is-alpha";
+import "./pla-is-shiny";
+import "./pla-ivs";
+import "./pla-message";
+import "./pla-spinner";
+import "./pla-tabbed-section";
+import "./pla-theme-toggle";
