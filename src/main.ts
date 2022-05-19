@@ -1,6 +1,8 @@
 import "./style.css";
 import "./components/pla-message";
 import "./components/pla-spinner";
+import "./components/pla-shiny";
+import "./components/pla-gender";
 
 function showMessage(): void {
   const message = document.createElement("pla-message");

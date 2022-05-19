@@ -11,25 +11,61 @@
 <body>
   <section class="section-messages">
     <h2>Messages</h2>
+
     <pla-message type="info" message="Info message" closable>
     </pla-message>
+
     <pla-message type="success" message="Info message">
     </pla-message>
+
     <pla-message type="warn"
       message="Warning message... and a really long one at that to see what happens when things wrap" closable>
     </pla-message>
+
     <pla-message type="error" message="Error message">
     </pla-message>
+
     <pla-message type="info" closable>
       <p>This is a multiline message</p>
       <p>Because it has two lines</p>
     </pla-message>
+
     <button id="show-message">Show Message</button>
   </section>
 
   <section class="section-spinners">
     <h2>Spinners</h2>
     <button id="show-spinner">Show a spinner</button>
+  </section>
+
+  <section class="section-shiny">
+    <h2>Shiny-ness</h2>
+
+    <ul>
+      <li>
+        <pla-shiny shiny square></pla-shiny>
+      </li>
+      <li>
+        <pla-shiny shiny></pla-shiny>
+      </li>
+      <li>
+        <pla-shiny></pla-shiny>
+      </li>
+    </ul>
+
+    <h3>Icon Only:</h3>
+
+    <ul>
+      <li>
+        <pla-shiny icononly shiny square></pla-shiny>
+      </li>
+      <li>
+        <pla-shiny icononly shiny></pla-shiny>
+      </li>
+      <li>
+        <pla-shiny icononly></pla-shiny>
+      </li>
+    </ul>
   </section>
 
   <script type="module" src="/src/main.ts"></script>
