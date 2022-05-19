@@ -17,6 +17,8 @@ export default class PlaMessage extends LitElement {
       --corner-radius: 4px;
       --spacing-vertical: 0.4rem;
       --spacing-horizontal: 0.6rem;
+      --close-button-size: 1.2rem;
+      --close-button-offset: 0.2rem;
     }
 
     .info {
@@ -47,34 +49,34 @@ export default class PlaMessage extends LitElement {
     }
 
     div {
-      text-align: left;
-      border-radius: var(--corner-radius);
-      padding: var(--spacing-vertical) var(--spacing-horizontal);
-
+      position: relative;
       color: var(--text-color);
       background-color: var(--background-color);
       border: 1px solid var(--border-color);
+      border-radius: var(--corner-radius);
+      text-align: left;
+      padding-block: var(--spacing-vertical);
+      padding-inline-start: var(--spacing-horizontal);
+      padding-inline-end: calc(
+        var(--close-button-offset) + var(--close-button-offset) +
+          var(--close-button-size)
+      );
       margin: var(--spacing-vertical) 0;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    slot {
-      display: block;
     }
 
     button {
       border: 1px solid var(--border-color);
+      border-radius: 50%;
       background-color: transparent;
-      align-self: right;
-      width: 1.2rem;
-      height: 1.2rem;
+      width: var(--close-button-size);
+      height: var(--close-button-size);
       padding: 0;
       margin: 0;
-      border-radius: 50%;
       display: grid;
       place-content: center;
-      flex-shrink: 0;
+      position: absolute;
+      inset-block-start: var(--close-button-offset);
+      inset-inline-end: var(--close-button-offset);
     }
 
     button:hover {
@@ -82,16 +84,13 @@ export default class PlaMessage extends LitElement {
     }
 
     button svg {
-      width: 1rem;
-      height: 1rem;
+      width: calc(var(--close-button-size) * 0.8);
+      height: calc(var(--close-button-size) * 0.8);
       fill: var(--border-color);
-      transition: fill;
-      transition-duration: 200ms;
+      transition: fill 200ms ease;
     }
 
     button:hover svg {
-      width: 1rem;
-      height: 1rem;
       fill: hsl(0, 100%, 100%, 0.8);
     }
   `;
@@ -106,7 +105,6 @@ export default class PlaMessage extends LitElement {
             @click=${this.closeButton}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
               <path
                 d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
               />
