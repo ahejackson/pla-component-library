@@ -24,12 +24,16 @@ export default class PlaIsAlpha extends LitElement {
   `;
 
   render() {
-    return this.alpha
-      ? html`${this.icononly ? "" : html`<span class="alpha">Alpha!</span>`}
-          <svg xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="/img/icons.svg#alpha"></use>
-          </svg>`
-      : html`${this.icononly ? "" : html`<span>Not Alpha</span>`}`;
+    if (this.alpha) {
+      return html`${this.icononly
+          ? ""
+          : html`<span class="alpha">Alpha!</span>`}
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="/img/icons.svg#alpha"></use>
+        </svg>`;
+    } else {
+      return this.icononly ? html`` : html`<span>Not Alpha</span>`;
+    }
   }
 }
 

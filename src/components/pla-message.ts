@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("pla-message")
 export default class PlaMessage extends LitElement {
-  @property()
+  @property({ type: String })
   type: "info" | "success" | "warn" | "error" = "info";
 
   @property({ type: String })
