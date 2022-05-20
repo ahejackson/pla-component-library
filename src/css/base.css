@@ -201,6 +201,25 @@ input[type="checkbox"] {
   padding: var(--spacing1);
 }
 
+button {
+  color: var(--text1);
+  background-color: transparent;
+  padding: var(--spacing2) var(--spacing3);
+  border: 2px solid var(--brand);
+  outline-color: var(--brand);
+  border-radius: var(--corner-roundness1);
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: hsl(var(--brand-hs), var(--brand-l), 40%);
+}
+
+button:active {
+  background-color: hsl(var(--brand-hs), var(--brand-l), 80%);
+  transform: translateY(0.1rem);
+}
+
 input[type="text"],
 input[type="number"],
 select {
@@ -217,6 +236,8 @@ select {
   border: 2px solid var(--gray-5);
 }
 
+select:active,
+select:focus,
 input[type="text"]:active,
 input[type="text"]:focus,
 input[type="text"]:focus-visible,
@@ -244,31 +265,6 @@ input[type="number"]:focus-visible {
 
 .hidden {
   display: none;
-}
-
-/* Color Theme Toggle */
-.theme-toggle {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  padding: var(--spacing1);
-}
-
-.theme-toggle svg {
-  stroke: var(--text1);
-  fill: var(--text1);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-[color-scheme="light"] .theme-toggle:hover svg {
-  stroke: black;
-  fill: black;
-}
-
-[color-scheme="dark"] .theme-toggle:hover svg {
-  stroke: white;
-  fill: white;
 }
 
 /* Header */

@@ -3,6 +3,9 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("pla-tabbed-section")
 export default class PlaTabbedSection extends LitElement {
+  @property()
+  temp: string = "";
+
   static styles = css``;
 
   render() {

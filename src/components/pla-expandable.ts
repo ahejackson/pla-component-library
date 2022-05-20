@@ -3,6 +3,9 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("pla-expandable")
 export default class PlaExpandable extends LitElement {
+  @property()
+  temp: string = "";
+
   static styles = css``;
 
   render() {

@@ -1,0 +1,36 @@
+export type IVs = [
+  hp: number,
+  att: number,
+  def: number,
+  spa: number,
+  spd: number,
+  spe: number
+];
+
+export enum Nature {
+  Hardy = "Hardy",
+  Lonely = "Lonely",
+  Brave = "Brave",
+  Adamant = "Adamant",
+  Naughty = "Naughty",
+  Bold = "Bold",
+  Docile = "Docile",
+  Relaxed = "Relaxed",
+  Impish = "Impish",
+  Lax = "Lax",
+  Timid = "Timid",
+  Hasty = "Hasty",
+  Serious = "Serious",
+  Jolly = "Jolly",
+  Naive = "Naive",
+  Modest = "Modest",
+  Mild = "Mild",
+  Quiet = "Quiet",
+  Bashful = "Bashful",
+  Rash = "Rash",
+  Calm = "Calm",
+  Gentle = "Gentle",
+  Sassy = "Sassy",
+  Careful = "Careful",
+  Quirky = "Quirky",
+}
