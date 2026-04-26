@@ -1,0 +1,102 @@
+/* Define all layers upfront */
+@layer reset, colors, theme, components, utility;
+
+/* Import files into layers */
+@import "./reset.css" layer(reset);
+@import "./colors.css" layer(colors);
+@import "./theme.css" layer(theme);
+@import "./components.css" layer(components);
+@import "./utility.css" layer(utility);
+
+body {
+	font-family: Lato, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding: 1rem;
+	background-color: var(--surface3);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+section {
+	background-color: var(--surface2);
+	padding: 1rem;
+	border-radius: 0.4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+main > section {
+	flex: 1 1 45%;
+}
+
+h2 {
+	margin: 0;
+}
+
+pla-spinner {
+	--color: var(--brand);
+	--speed: 1.2s;
+}
+
+details {
+	background-color: var(--surface1);
+	padding: 0.6rem;
+	border-radius: 0.4rem;
+}
+
+/* Header */
+.pla-heading {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.pla-heading-highlight {
+	font-size: 2.15rem;
+	font-weight: 800;
+	background: -webkit-linear-gradient(var(--blue-1), var(--blue-2));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+	padding: 0.4rem;
+}
+
+.container {
+	max-width: 110ch;
+	margin-inline: auto;
+}
+
+.history {
+	max-width: 1280px;
+	background-color: var(--surface2);
+	padding: 2rem;
+	margin: 2rem auto;
+	border-radius: 0.4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	font-style: italic;
+}
+
+.iv-demo {
+	background-color: var(--surface1);
+	padding: 0.6rem;
+	border-radius: 0.4rem;
+	margin-bottom: 0.6rem;
+}

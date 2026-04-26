@@ -1,0 +1,55 @@
+:root {
+	/* light */
+	--brand-light: var(--blue-1);
+	--text1-light: var(--gray-8);
+	--text2-light: var(--gray-7);
+	--surface1-light: var(--gray-0);
+	--surface2-light: var(--gray-1);
+	--surface3-light: var(--gray-2);
+
+	/* dark */
+	--brand-dark: var(--blue-2);
+	--text1-dark: var(--gray-1);
+	--text2-dark: var(--gray-3);
+	--surface1-dark: var(--gray-7);
+	--surface2-dark: var(--gray-8);
+	--surface3-dark: var(--gray-9);
+
+	/* theme */
+	--brand: light-dark(var(--brand-light), var(--brand-dark));
+	--text1: light-dark(var(--text1-light), var(--text1-dark));
+	--text2: light-dark(var(--text2-light), var(--text2-dark));
+	--surface1: light-dark(var(--surface1-light), var(--surface1-dark));
+	--surface2: light-dark(var(--surface2-light), var(--surface2-dark));
+	--surface3: light-dark(var(--surface3-light), var(--surface3-dark));
+
+	/* spacing */
+	--spacing0: 0.2rem;
+	--spacing1: 0.4rem;
+	--spacing2: 0.6rem;
+	--spacing3: 1rem;
+	--spacing4: 1.4rem;
+	--spacing5: 2rem;
+
+	/* padding */
+	--max-padding: 10rem;
+
+	/* borders */
+	--corner-roundness1: 0.25rem;
+	--corner-roundness2: var(--spacing2);
+}
+
+:root,
+[color-scheme="light"] {
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+	}
+}
+
+[color-scheme="dark"] {
+	color-scheme: dark;
+}

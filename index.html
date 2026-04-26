@@ -1,186 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PLA Component Library</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital&display=swap" rel="stylesheet" />
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PLA Component Library</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-</head>
+	<body>
+		<header id="header">
+			<h1 class="pla-heading"><span class="pla-heading-highlight">PLA</span> Component Library</h1>
+			<pla-theme-toggle theme="dark"></pla-theme-toggle>
+		</header>
 
-<body>
-  <header id="header">
-    <h1 class="pla-heading"><span class="pla-heading-highlight">PLA</span> Component Library</h1>
-    <pla-theme-toggle theme="dark"></pla-theme-toggle>
-  </header>
+		<aside class="history">
+			<div class="container">
+				These components were made for a community RNG tool for the game Pokémon: Legends Arceus.
+				The site was a vanilla JavaScript app, so I used custom elements to introduce some basic
+				reusable components without forcing the project to adopt a framework.
+			</div>
+		</aside>
 
-  <main>
-    <section class="section-messages">
-      <h2>Messages</h2>
+		<main>
+			<section class="section-messages">
+				<h2>Messages</h2>
 
-      <details>
-        <summary>Create a new message</summary>
-        <div class="stack">
-          <input id="new-message-text" type="text" value="Message text" />
-          <select id="new-message-type">
-            <option value="info">Info</option>
-            <option value="success">Success</option>
-            <option value="warn">Warning</option>
-            <option value="error">Error</option>
-          </select>
-          <label><input id="new-message-closable" type="checkbox" checked /> Closable?</label>
-          <button id="show-message" type="button">Show Message</button>
-        </div>
-      </details>
+				<details>
+					<summary>Create a new message</summary>
+					<div class="stack">
+						<input id="new-message-text" type="text" value="Message text" />
+						<select id="new-message-type">
+							<option value="info">Info</option>
+							<option value="success">Success</option>
+							<option value="warn">Warning</option>
+							<option value="error">Error</option>
+						</select>
+						<label><input id="new-message-closable" type="checkbox" checked /> Closable?</label>
+						<button id="show-message" type="button">Show Message</button>
+					</div>
+				</details>
 
-      <div id="messages-area">
-        <pla-message type="info" closable>
-          <p>This is a multiline message (that's also closable)</p>
-          <p>Because it has multiple paragraph tags</p>
-          <p>It can contain other HTML elements too... <pla-is-shiny shiny icononly></pla-is-shiny>
-          </p>
-        </pla-message>
+				<div id="messages-area">
+					<pla-message type="info" closable>
+						<p>This is a multiline message (that's also closable)</p>
+						<p>Because it has multiple paragraph tags</p>
+						<p>
+							It can contain other HTML elements too... <pla-is-shiny shiny icononly></pla-is-shiny>
+						</p>
+					</pla-message>
 
-        <pla-message type="success" message="Success message">
-        </pla-message>
+					<pla-message type="success" message="Success message"> </pla-message>
 
-        <pla-message type="warn"
-          message="Closable warning message... and a really long one at that to see what happens when things wrap"
-          closable>
-        </pla-message>
+					<pla-message
+						type="warn"
+						message="Closable warning message... and a really long one at that to see what happens when things wrap"
+						closable
+					>
+					</pla-message>
 
-        <pla-message type="error">
-          Error Message
-        </pla-message>
-      </div>
-    </section>
+					<pla-message type="error"> Error Message </pla-message>
+				</div>
+			</section>
 
-    <section class="section-spinners">
-      <h2>Spinners</h2>
-      <button id="show-spinner">Show a spinner</button>
-      <div id="spinner-area"></div>
-    </section>
+			<section class="section-spinners">
+				<h2>Spinners</h2>
+				<button type="button" id="show-spinner">Show a spinner</button>
+				<div id="spinner-area"></div>
+			</section>
 
-    <section class="section-shiny">
-      <h2>Is Shiny</h2>
+			<section class="section-shiny">
+				<h2>Is Shiny</h2>
 
-      <ul>
-        <li>
-          <pla-is-shiny shiny square></pla-is-shiny>
-        </li>
-        <li>
-          <pla-is-shiny shiny></pla-is-shiny>
-        </li>
-        <li>
-          <pla-is-shiny></pla-is-shiny>
-        </li>
-      </ul>
+				<ul>
+					<li>
+						<pla-is-shiny shiny square></pla-is-shiny>
+					</li>
+					<li>
+						<pla-is-shiny shiny></pla-is-shiny>
+					</li>
+					<li>
+						<pla-is-shiny></pla-is-shiny>
+					</li>
+				</ul>
 
-      <h3>Icon only</h3>
+				<h3>Icon only</h3>
 
-      <ul>
-        <li>
-          <pla-is-shiny icononly shiny square></pla-is-shiny>
-        </li>
-        <li>
-          <pla-is-shiny icononly shiny></pla-is-shiny>
-        </li>
-        <li>
-          <pla-is-shiny icononly></pla-is-shiny>
-        </li>
-      </ul>
-    </section>
+				<ul>
+					<li>
+						<pla-is-shiny icononly shiny square></pla-is-shiny>
+					</li>
+					<li>
+						<pla-is-shiny icononly shiny></pla-is-shiny>
+					</li>
+					<li>
+						<pla-is-shiny icononly></pla-is-shiny>
+					</li>
+				</ul>
+			</section>
 
-    <section class="section-shiny">
-      <h2>Is Alpha</h2>
+			<section class="section-shiny">
+				<h2>Is Alpha</h2>
 
-      <ul>
-        <li>
-          <pla-is-alpha alpha></pla-is-alpha>
-        </li>
-        <li>
-          <pla-is-alpha></pla-is-alpha>
-        </li>
-      </ul>
+				<ul>
+					<li>
+						<pla-is-alpha alpha></pla-is-alpha>
+					</li>
+					<li>
+						<pla-is-alpha></pla-is-alpha>
+					</li>
+				</ul>
 
-      <h3>Icon only</h3>
+				<h3>Icon only</h3>
 
-      <ul>
-        <li>
-          <pla-is-alpha icononly alpha></pla-is-alpha>
-        </li>
-        <li>
-          <pla-is-alpha icononly></pla-is-alpha>
-        </li>
-      </ul>
-    </section>
+				<ul>
+					<li>
+						<pla-is-alpha icononly alpha></pla-is-alpha>
+					</li>
+					<li>
+						<pla-is-alpha icononly></pla-is-alpha>
+					</li>
+				</ul>
+			</section>
 
-    <section class="section-gender">
-      <h2>Gender</h2>
+			<section class="section-gender">
+				<h2>Gender</h2>
 
-      <ul>
-        <li>
-          <pla-gender gender="male"></pla-gender>
-        </li>
-        <li>
-          <pla-gender gender="female"></pla-gender>
-        </li>
-        <li>
-          <pla-gender gender="genderless"></pla-gender>
-        </li>
-      </ul>
-    </section>
+				<ul>
+					<li>
+						<pla-gender gender="male"></pla-gender>
+					</li>
+					<li>
+						<pla-gender gender="female"></pla-gender>
+					</li>
+					<li>
+						<pla-gender gender="genderless"></pla-gender>
+					</li>
+				</ul>
+			</section>
 
-    <section class="section-ivs">
-      <h2>IVs</h2>
+			<section class="section-ivs">
+				<h2>IVs</h2>
 
-      <p>Change the nature to see the iv coloring automatically update:</p>
-      <pla-ivs id="demo-ivs" ivs="[31,2,25,31,2,31]"></pla-ivs>
-      <select id="iv-nature">
-        <option value="Hardy">Hardy</option>
-        <option value="Lonely">Lonely</option>
-        <option value="Brave">Brave</option>
-        <option value="Adamant">Adamant</option>
-        <option value="Naughty">Naughty</option>
-        <option value="Bold">Bold</option>
-        <option value="Docile">Docile</option>
-        <option value="Relaxed">Relaxed</option>
-        <option value="Impish">Impish</option>
-        <option value="Lax">Lax</option>
-        <option value="Timid">Timid</option>
-        <option value="Hasty">Hasty</option>
-        <option value="Serious">Serious</option>
-        <option value="Jolly">Jolly</option>
-        <option value="Naive">Naive</option>
-        <option value="Modest">Modest</option>
-        <option value="Quiet">Quiet</option>
-        <option value="Bashful">Bashful</option>
-        <option value="Rash">Rash</option>
-        <option value="Calm">Calm</option>
-        <option value="Gentle">Gentle</option>
-        <option value="Sassy">Sassy</option>
-        <option value="Careful">Careful</option>
-        <option value="Quirky">Quirky</option>
-      </select>
+				<p>Change the nature to see the iv coloring automatically update:</p>
+				<select id="iv-nature">
+					<option value="Hardy">Hardy</option>
+					<option value="Lonely">Lonely</option>
+					<option value="Brave">Brave</option>
+					<option value="Adamant">Adamant</option>
+					<option value="Naughty">Naughty</option>
+					<option value="Bold">Bold</option>
+					<option value="Docile">Docile</option>
+					<option value="Relaxed">Relaxed</option>
+					<option value="Impish">Impish</option>
+					<option value="Lax">Lax</option>
+					<option value="Timid">Timid</option>
+					<option value="Hasty">Hasty</option>
+					<option value="Serious">Serious</option>
+					<option value="Jolly">Jolly</option>
+					<option value="Naive">Naive</option>
+					<option value="Modest">Modest</option>
+					<option value="Mild">Mild</option>
+					<option value="Quiet">Quiet</option>
+					<option value="Bashful">Bashful</option>
+					<option value="Rash">Rash</option>
+					<option value="Calm">Calm</option>
+					<option value="Gentle">Gentle</option>
+					<option value="Sassy">Sassy</option>
+					<option value="Careful">Careful</option>
+					<option value="Quirky">Quirky</option>
+				</select>
+				<div class="iv-demo">IVs: <pla-ivs id="demo-ivs" ivs="[31,2,25,31,2,31]" /></div>
 
-      <p>You can also use negative numbers to specify ignored ivs:</p>
-      <pla-ivs ivs="[31,-1,31,31,31,31]" nature="Timid"></pla-ivs>
-    </section>
+				<p>You can highlight perfect IVs:</p>
+				<div class="iv-demo">
+					Adamant: <pla-ivs ivs="[31,31,30,30,30,31]" nature="Adamant" highlightperfect="true" />
+				</div>
 
-    <section>
-      <h2>And I'm working on...</h2>
+				<p>Negative numbers will show as unspecified:</p>
+				<div class="iv-demo">Timid: <pla-ivs ivs="[31,-1,31,31,31,31]" nature="Timid" /></div>
+			</section>
+		</main>
 
-      <ul>
-        <li>Tabbed sections</li>
-        <li>Expandable Panels</li>
-      </ul>
-    </section>
-  </main>
-
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
+		<script type="module" src="/src/main.ts"></script>
+	</body>
 </html>
