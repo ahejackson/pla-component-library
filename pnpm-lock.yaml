@@ -11,10 +11,10 @@ importers:
       lit:
         specifier: ^3.3.2
         version: 3.3.2
+    devDependencies:
       oxfmt:
         specifier: ^0.46.0
         version: 0.46.0
-    devDependencies:
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
