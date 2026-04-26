@@ -32,7 +32,7 @@ export default class PlaIsAlpha extends LitElement {
 		if (this.alpha) {
 			return html`${this.icononly ? "" : html`<span class="alpha">Alpha!</span>`}
 				<svg xmlns="http://www.w3.org/2000/svg">
-					<use href="/img/icons.svg#alpha"></use>
+					<use href="/pla-component-library/img/icons.svg#alpha"></use>
 				</svg>`;
 		} else {
 			return this.icononly ? html`` : html`<span>Not Alpha</span>`;

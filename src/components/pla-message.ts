@@ -107,7 +107,7 @@ export default class PlaMessage extends LitElement {
 			${this.closable
 				? html`<button type="button" aria-label="Close" @click=${this.closeButton}>
 						<svg xmlns="http://www.w3.org/2000/svg">
-							<use href="/img/icons.svg#close"></use>
+							<use href="/pla-component-library/img/icons.svg#close"></use>
 						</svg>
 					</button>`
 				: ""}

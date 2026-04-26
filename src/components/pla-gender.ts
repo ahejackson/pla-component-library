@@ -39,17 +39,17 @@ export default class PlaGender extends LitElement {
 		if (this.gender === "male") {
 			return html`${this.icononly ? "" : "Male"}
 				<svg xmlns="http://www.w3.org/2000/svg" class="male">
-					<use href="/img/icons.svg#male"></use>
+					<use href="/pla-component-library/img/icons.svg#male"></use>
 				</svg>`;
 		} else if (this.gender === "female") {
 			return html`${this.icononly ? "" : "Female"}
 				<svg xmlns="http://www.w3.org/2000/svg" class="female">
-					<use href="/img/icons.svg#female"></use>
+					<use href="/pla-component-library/img/icons.svg#female"></use>
 				</svg>`;
 		} else {
 			return html`${this.icononly ? "" : "Genderless"}
 				<svg xmlns="http://www.w3.org/2000/svg" class="genderless">
-					<use href="/img/icons.svg#genderless"></use>
+					<use href="/pla-component-library/img/icons.svg#genderless"></use>
 				</svg>`;
 		}
 	}

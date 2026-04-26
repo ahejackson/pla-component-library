@@ -48,12 +48,12 @@ export default class PlaIsShiny extends LitElement {
 	override render() {
 		const shinyHtml = html`${this.icononly ? "" : html`<span class="shiny">Shiny!</span>`}
 			<svg xmlns="http://www.w3.org/2000/svg" class="shiny">
-				<use href="/img/icons.svg#shiny"></use>
+				<use href="/pla-component-library/img/icons.svg#shiny"></use>
 			</svg>`;
 
 		const squareHtml = html`${this.icononly ? "" : html`<span class="square">Square Shiny!</span>`}
 			<svg xmlns="http://www.w3.org/2000/svg" class="square">
-				<use href="/img/icons.svg#square"></use>
+				<use href="/pla-component-library/img/icons.svg#square"></use>
 			</svg>`;
 
 		return html`${this.square

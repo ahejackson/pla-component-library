@@ -68,11 +68,11 @@ export default class PlaThemeToggle extends LitElement {
 		>
 			<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 				<use
-					href="/img/icons.svg#moon"
+					href="/pla-component-library/img/icons.svg#moon"
 					class=${this.theme === "light" ? "light" : "light hidden"}
 				></use>
 				<use
-					href="/img/icons.svg#sun"
+					href="/pla-component-library/img/icons.svg#sun"
 					class=${this.theme === "dark" ? "dark" : "dark hidden"}
 				></use>
 			</svg>
